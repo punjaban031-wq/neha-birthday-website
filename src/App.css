@@ -1,0 +1,1758 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  overflow-x:hidden;
+  background:linear-gradient(135deg,#ff9ec4,#f8b6ff,#ffd6ec,#cfa8ff);
+  background-size:400% 400%;
+  animation:bgAnimation 15s ease infinite;
+  min-height:100vh;
+}
+
+@keyframes bgAnimation{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.container{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+
+    text-align:center;
+
+    padding:20px 20px 40px;
+
+    gap:15px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+
+h1{
+  font-family:'Poppins',sans-serif;
+  font-size:clamp(48px,7vw,85px);
+    line-height:1.1;
+  color:#fff;
+  text-shadow:0 4px 20px rgba(255,0,120,.5);
+}
+
+h2{
+  margin-top:15px;
+  font-size:32px;
+  color:#ffffff;
+}
+
+h3{
+  margin-top:15px;
+  color:white;
+  font-weight:400;
+}
+
+/* ===========================
+   MESSAGE
+=========================== */
+
+.message{
+    width:min(750px,90%);
+    margin:10px auto;
+    padding:18px 20px;
+
+    color:white;
+    font-size:18px;
+    line-height:1.6;
+
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.btn,
+.letterBtn{
+  margin-top:20px;
+  padding:16px 38px;
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+  font-size:18px;
+  font-weight:bold;
+  color:white;
+  background:linear-gradient(45deg,#ff4fa8,#ff7bd5);
+  transition:.35s;
+  box-shadow:0 10px 25px rgba(255,0,130,.35);
+}
+
+.btn:hover,
+.letterBtn:hover{
+  transform:translateY(-5px) scale(1.05);
+  box-shadow:0 15px 35px rgba(255,0,130,.5);
+}
+
+/* ===========================
+   COUNTDOWN
+=========================== */
+
+.countdown{
+  margin-top:30px;
+  display:flex;
+   gap:15px;
+    margin:20px 0;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+
+  .time-box{
+    width:120px;
+    height:120px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.20);
+
+    backdrop-filter:blur(20px);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 10px 30px rgba(255,0,150,.15);
+
+    transition:.35s;
+}
+
+.time-box:hover{
+    transform:translateY(-8px) scale(1.05);
+}
+
+.time-box h2{
+  font-size:38px;
+  margin:0;
+}
+
+.time-box p{
+    margin-top:8px;
+    font-size:17px;
+    color:white;
+    font-weight:600;
+}
+
+/* ===========================
+   BIRTHDAY OVERLAY
+=========================== */
+
+.birthday-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(255,20,147,.35);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  backdrop-filter:blur(8px);
+  z-index:999;
+  animation:fadeIn 1s;
+}
+
+.birthday-overlay h1{
+  font-size:85px;
+  color:white;
+}
+
+.birthday-overlay h2{
+  color:white;
+  margin-top:20px;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  animation: fadeGallery 1s ease;
+}
+
+.gallery-card {
+  background: rgba(255,255,255,.18);
+  backdrop-filter: blur(15px);
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.25);
+}
+
+.slider-image {
+  width: auto;
+  max-width: 90%;
+  max-height: 650px;
+  border-radius: 25px;
+  object-fit: contain;
+  box-shadow: 0 15px 40px rgba(0,0,0,.35);
+  animation: imageFade 1s ease;
+}
+
+@keyframes imageFade{
+  from{
+    opacity:0;
+    transform:scale(.92);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+@keyframes fadeGallery{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ===========================
+   HEARTS
+=========================== */
+
+.heart{
+  position:fixed;
+  bottom:-30px;
+  animation:floatHeart 6s linear forwards;
+  pointer-events:none;
+  z-index:1000;
+}
+
+@keyframes floatHeart{
+
+  0%{
+    transform:translateY(0) scale(.8);
+    opacity:1;
+  }
+
+  25%{
+    transform:translateY(-180px) translateX(-15px) scale(1);
+  }
+
+  50%{
+    transform:translateY(-360px) translateX(20px) scale(1.15);
+  }
+
+  75%{
+    transform:translateY(-540px) translateX(-18px) scale(1);
+  }
+
+  100%{
+    transform:translateY(-900px) scale(.4);
+    opacity:0;
+  }
+
+}
+
+/* ===========================
+   IMAGE CAPTION
+=========================== */
+
+.gallery-title{
+
+  color:white;
+  margin-bottom:20px;
+  font-size:28px;
+  font-weight:600;
+
+}
+
+.gallery-text{
+
+  margin-top:20px;
+  color:white;
+  font-size:18px;
+  line-height:1.8;
+
+}
+
+/* ===========================
+   GLOW EFFECT
+=========================== */
+
+.slider-image:hover{
+
+  transform:scale(1.02);
+  transition:.4s;
+
+  box-shadow:
+      0 0 20px #ff7bd5,
+      0 0 40px #ff4fa8,
+      0 0 60px #ff9ec4;
+
+}
+
+/* ===========================
+   BUTTON SPACING
+=========================== */
+
+.letterBtn{
+
+  margin-bottom:60px;
+
+}
+/* ===========================
+   LOVE LETTER
+=========================== */
+
+.letter-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:5000;
+  animation:fadeLetter .6s ease;
+}
+
+@keyframes fadeLetter{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+.letter-card{
+  width:90%;
+  max-width:700px;
+  background:white;
+  border-radius:25px;
+  padding:40px;
+  text-align:left;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+  animation:letterOpen .7s ease;
+}
+
+@keyframes letterOpen{
+
+  from{
+    transform:translateY(60px) scale(.9);
+    opacity:0;
+  }
+
+  to{
+    transform:translateY(0) scale(1);
+    opacity:1;
+  }
+
+}
+
+.letter-card h1{
+
+  text-align:center;
+  font-family:'Great Vibes',cursive;
+  color:#ff4fa8;
+  font-size:58px;
+  margin-bottom:25px;
+
+}
+
+.letter-card p{
+
+  font-size:20px;
+  line-height:2;
+  color:#555;
+
+}
+
+.closeBtn{
+
+  margin-top:35px;
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:50px;
+  background:linear-gradient(45deg,#ff4fa8,#ff7bd5);
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  transition:.3s;
+
+}
+
+.closeBtn:hover{
+
+  transform:scale(1.03);
+
+}
+
+/* ===========================
+   FIREWORKS
+=========================== */
+
+.fireworks{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:3000;
+}
+
+.firework{
+  position:absolute;
+  font-size:32px;
+  animation:explode 2s ease-in-out infinite;
+  text-shadow:
+    0 0 10px white,
+    0 0 20px #ff66cc,
+    0 0 40px #ffd700;
+}
+
+@keyframes explode{
+
+  0%{
+    transform:scale(.2);
+    opacity:0;
+  }
+
+  30%{
+    opacity:1;
+    transform:scale(1.4);
+  }
+
+  70%{
+    transform:scale(.9);
+  }
+
+  100%{
+    opacity:0;
+    transform:scale(2);
+  }
+
+}
+
+/* ===========================
+   SPARKLES
+=========================== */
+
+.sparkle{
+  position:fixed;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:white;
+  animation:twinkle 3s linear infinite;
+  pointer-events:none;
+}
+
+@keyframes twinkle{
+
+  0%{
+    opacity:0;
+    transform:scale(.5);
+  }
+
+  50%{
+    opacity:1;
+    transform:scale(1.4);
+  }
+
+  100%{
+    opacity:0;
+    transform:scale(.5);
+  }
+
+}
+
+/* ===========================
+   GLOWING TEXT
+=========================== */
+
+.glow{
+
+  color:white;
+
+  text-shadow:
+      0 0 10px #fff,
+      0 0 20px #ff66cc,
+      0 0 35px #ff1493,
+      0 0 55px #ff69b4;
+
+}
+/* ===========================
+   FINAL POLISH
+=========================== */
+
+button{
+  font-family:'Poppins',sans-serif;
+}
+
+img{
+  user-select:none;
+  -webkit-user-drag:none;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#ffd6ec;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#ff4fa8;
+  border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#ff1493;
+}
+
+/* ===========================
+   FLOATING ANIMATION
+=========================== */
+
+.float{
+  animation:floating 4s ease-in-out infinite;
+}
+
+@keyframes floating{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+
+}
+
+/* ===========================
+   FADE UP
+=========================== */
+
+.fade-up{
+  animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* ===========================
+   CARD EFFECT
+=========================== */
+
+.card{
+  background:rgba(255,255,255,.18);
+  backdrop-filter:blur(15px);
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media (max-width:992px){
+
+  h1{
+    font-size:58px;
+  }
+
+  h2{
+    font-size:28px;
+  }
+
+  .message{
+    font-size:18px;
+    padding:22px;
+  }
+
+  .slider-image{
+    max-height:500px;
+  }
+
+}
+
+@media (max-width:768px){
+
+  .container{
+    padding:20px;
+  }
+
+  h1{
+    font-size:46px;
+  }
+
+  h2{
+    font-size:24px;
+  }
+
+  h3{
+    font-size:18px;
+  }
+
+  .message{
+    font-size:16px;
+    line-height:1.8;
+    padding:18px;
+  }
+
+  .countdown{
+    gap:15px;
+  }
+
+  .time-box{
+    width:90px;
+    height:90px;
+  }
+
+  .time-box h2{
+    font-size:30px;
+  }
+
+  .time-box p{
+    font-size:14px;
+  }
+
+  .btn,
+  .letterBtn{
+    width:100%;
+    max-width:300px;
+  }
+
+  .letter-card{
+    padding:25px;
+  }
+
+  .letter-card h1{
+    font-size:42px;
+  }
+
+  .letter-card p{
+    font-size:17px;
+  }
+
+  .slider-image{
+    max-width:100%;
+    max-height:400px;
+  }
+
+}
+
+@media (max-width:480px){
+
+  h1{
+    font-size:36px;
+  }
+
+  h2{
+    font-size:20px;
+  }
+
+  h3{
+    font-size:16px;
+  }
+
+  .message{
+    font-size:15px;
+  }
+
+  .time-box{
+    width:75px;
+    height:75px;
+  }
+
+  .time-box h2{
+    font-size:24px;
+  }
+
+  .time-box p{
+    font-size:12px;
+  }
+
+  .letter-card h1{
+    font-size:34px;
+  }
+
+  .letter-card p{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+}
+body{
+
+    transition:.7s;
+
+}
+/* ===========================
+   END
+=========================== */
+/* ===========================
+   LOVE LETTER PAGE
+=========================== */
+
+.letter-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    background:linear-gradient(135deg,#5b2c83,#8e44ad,#c86dd7);
+}
+
+.letter-card{
+    max-width:800px;
+    width:90%;
+    padding:40px;
+    border-radius:30px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    color:white;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+}
+
+.letter-card h1{
+    margin-bottom:25px;
+}
+
+.letter-card p{
+    font-size:22px;
+    line-height:2;
+    white-space:pre-line;
+}
+/* ===========================
+   LOVE LETTER PAGE
+=========================== */
+
+.love-page{
+    min-height:100vh;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    padding:40px 15px 80px 15px;
+
+    background:linear-gradient(
+        135deg,
+        #32104b,
+        #6a1b9a,
+        #8e44ad,
+        #d16ba5
+    );
+
+    background-size:400% 400%;
+
+    animation:gradientMove 15s ease infinite;
+
+    position:relative;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+@keyframes gradientMove{
+
+    0%{background-position:0% 50%;}
+
+    50%{background-position:100% 50%;}
+
+    100%{background-position:0% 50%;}
+
+}
+
+.love-container{
+
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+
+    z-index:5;
+
+}
+
+.love-title{
+
+    color:white;
+
+    margin-bottom:30px;
+
+    text-align:center;
+
+}
+
+.love-paper{
+
+    background:#fffdf8;
+
+    padding:40px 24px;
+
+    border-radius:25px;
+
+    color:#444;
+
+    font-size:clamp(16px, 2vw, 20px);
+
+    line-height:1.85;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+    height:auto;
+
+    max-height:none;
+
+    overflow:visible;
+
+    margin-bottom:30px;
+
+    word-wrap:break-word;
+
+    overflow-wrap:break-word;
+
+}
+
+.love-paper::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.love-paper::-webkit-scrollbar-thumb{
+
+    background:#d16ba5;
+
+    border-radius:10px;
+
+}
+/* ================= FINAL PAGE ================= */
+
+.final-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+ 
+    padding:40px;
+
+    background:linear-gradient(
+        135deg,
+        #ff6fb5,
+        #ff8ac6,
+        #b76cff,
+        #7b2cbf
+    );
+
+    background-size:400% 400%;
+
+    animation:gradientMove 15s ease infinite;
+
+    color:white;
+}
+
+.birthday-title{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:12px;
+
+    color:white;
+
+    font-size:clamp(42px,6vw,75px);
+
+    font-weight:900;
+
+    text-align:center;
+
+    line-height:1.05;
+
+    margin-bottom:30px;
+}
+
+.party{
+    font-size:70px;
+}
+
+.subtitle{
+    font-size:clamp(24px,3vw,40px);
+
+    font-weight:700;
+
+    line-height:1.4;
+
+    text-align:center;
+
+    margin-bottom:35px;
+}
+
+.final-message{
+
+    max-width:750px;
+
+    font-size:22px;
+
+    line-height:2;
+
+    background:rgba(255,255,255,.15);
+
+    padding:30px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(15px);
+
+    margin-bottom:40px;
+
+}
+/* ===========================
+   FLOATING HEARTS
+=========================== */
+
+.floating-heart{
+    position: fixed;
+    bottom: -50px;
+    animation: floatHeart 6s linear forwards;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes floatHeart{
+
+    0%{
+        transform: translateY(0) scale(.5);
+        opacity: 0;
+    }
+
+    15%{
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(-120vh) scale(1.3);
+        opacity: 0;
+    }
+}
+/* ===========================
+   FALLING ROSE PETALS
+=========================== */
+
+.rose-petal{
+
+    position:fixed;
+
+    top:-60px;
+
+    pointer-events:none;
+
+    z-index:2;
+
+    animation-name:fallPetal;
+
+    animation-timing-function:linear;
+
+    animation-fill-mode:forwards;
+
+}
+
+@keyframes fallPetal{
+
+    0%{
+
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+            translateY(110vh)
+            translateX(80px)
+            rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
+/* ==========================================
+            VIDEO PAGE
+========================================== */
+
+.video-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,.70),
+        rgba(255,245,248,.75)
+    ),
+    url("/images/rose-bg.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+/* ========================= */
+
+.video-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+
+.video-title .heart{
+    font-size: 60px;
+}
+
+.video-title .line1{
+    font-family: 'Great Vibes', cursive;
+    font-size: 70px;
+    color: #ff3f86;
+    text-shadow: 0 4px 15px rgba(255,255,255,0.9);
+}
+
+.video-title .line2{
+    font-family: 'Great Vibes', cursive;
+    font-size: 95px;
+    color: #ff3f86;
+    text-shadow: 0 4px 15px rgba(255,255,255,0.9);
+}
+/* ========================= */
+
+.video-card{
+
+    width:850px;
+
+    max-width:92%;
+
+    background:rgba(255,255,255,.30);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    padding:18px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.20);
+
+}
+/* ========================= */
+
+.birthday-video{
+
+    width:100%;
+
+    border-radius:20px;
+
+}
+
+/* ========================= */
+
+.video-message{
+
+    margin-top:35px;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#b1005b;
+
+    text-shadow:0 2px 8px rgba(255,255,255,.9);
+
+    line-height:1.8;
+
+}
+
+/* ========================= */
+
+.rose{
+
+    position:absolute;
+
+    width:220px;
+
+    opacity:.95;
+
+    animation:floatRose 6s ease-in-out infinite;
+
+}
+
+.rose-left-top{
+
+    top:0;
+
+    left:0;
+
+}
+
+.rose-right-top{
+
+    top:0;
+
+    right:0;
+
+}
+
+.rose-left-bottom{
+
+    bottom:0;
+
+    left:0;
+
+}
+
+.rose-right-bottom{
+
+    bottom:0;
+
+    right:0;
+
+}
+
+/* ========================= */
+
+@keyframes floatRose{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+/* ================= MEMORY BOOK ================= */
+
+.memory-page{
+    position:relative;
+    min-height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background:linear-gradient(135deg,#ffe5ec,#ffd6e7,#fff5f8);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:40px 20px 120px;
+}
+
+.memory-title{
+    font-size:55px;
+    color:#ff2e7a;
+    margin-bottom:50px;
+    font-family:'Great Vibes',cursive;
+    text-align:center;
+    text-shadow:0 3px 10px rgba(255,255,255,.9);
+}
+
+.polaroid-area{
+    position:relative;
+    width:1100px;
+    height:760px;
+    max-width:100%;
+}
+
+.polaroid{
+    position:absolute;
+    width:210px;
+    background:#fff;
+    padding:12px;
+    padding-bottom:45px;
+    border-radius:6px;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    animation:photoDrop 1.2s ease forwards;
+    transition:.3s;
+}
+
+.polaroid:hover{
+    transform:scale(1.05) rotate(0deg)!important;
+    z-index:999;
+}
+
+.polaroid img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:5px;
+    display:block;
+}
+
+.caption{
+    margin-top:10px;
+    text-align:center;
+    color:#ff2e7a;
+    font-weight:bold;
+    font-size:18px;
+    font-family:cursive;
+}
+
+.memory-message{
+    margin-top:40px;
+    width:90%;
+    max-width:800px;
+    text-align:center;
+    color:#b40052;
+    animation:fadeIn 2s ease;
+}
+
+.memory-message h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.memory-message p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+.final-btn{
+    margin-top:40px;
+    padding:14px 35px;
+    border:none;
+    border-radius:50px;
+    background:#ff2e7a;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.final-btn:hover{
+    transform:scale(1.08);
+}
+
+.rose-petal{
+    position:absolute;
+    top:-40px;
+    animation-name:fallPetal;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+    pointer-events:none;
+    z-index:999;
+}
+
+@keyframes fallPetal{
+    from{
+        transform:translateY(-50px) rotate(0deg);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(120vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+@keyframes photoDrop{
+    0%{
+        opacity:0;
+        transform:translateY(-500px) scale(.3);
+    }
+
+    60%{
+        opacity:1;
+        transform:translateY(30px) scale(1.03);
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+
+    .polaroid-area{
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:25px;
+    }
+
+    .polaroid{
+        position:relative !important;
+        top:auto !important;
+        left:auto !important;
+        transform:rotate(0deg)!important;
+        margin:10px;
+    }
+
+} 
+
+/* ================= VIDEO SECTION (NEHA1) ================= */
+
+.neha1-video-section {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1.5s ease forwards;
+    padding: 0 15px 40px;
+    z-index: 10;
+}
+
+.neha1-video-header {
+    margin-bottom: 25px;
+    animation: fadeIn 1.8s ease forwards;
+}
+
+.neha1-video-title {
+    font-size: 38px;
+    color: #ff2e7a;
+    font-family: 'Great Vibes', cursive, 'Dancing Script', sans-serif;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.9);
+}
+
+.neha1-video-subtitle {
+    font-size: 17px;
+    color: #b40052;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    opacity: 0.9;
+    letter-spacing: 0.3px;
+}
+
+.neha1-video-card-wrapper {
+    position: relative;
+    width: min(92vw, 700px);
+    margin: 0 auto;
+    border-radius: 24px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 20px 45px rgba(255, 46, 122, 0.2), 0 5px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.neha1-video-card-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 55px rgba(255, 46, 122, 0.3), 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.neha1-birthday-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    object-fit: contain;
+    background: #000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.neha1-play-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: opacity 0.4s ease;
+}
+
+.neha1-play-btn-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff2e7a, #ff758c);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 8px 25px rgba(255, 46, 122, 0.6);
+    margin-bottom: 12px;
+    animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.neha1-play-text {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.neha1-play-subtext {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.continue-story-btn {
+    margin-top: 35px;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff2e7a, #ff6584);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(255, 46, 122, 0.4);
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease forwards, pulseGlow 2.5s infinite ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.continue-story-btn:hover {
+    transform: scale(1.06) translateY(-2px);
+    box-shadow: 0 15px 40px rgba(255, 46, 122, 0.5);
+}
+
+@media(max-width: 768px) {
+    .neha1-video-title {
+        font-size: 28px;
+    }
+
+    .neha1-video-subtitle {
+        font-size: 15px;
+    }
+
+    .neha1-play-btn-circle {
+        width: 56px;
+        height: 56px;
+        font-size: 22px;
+    }
+
+    .neha1-play-text {
+        font-size: 17px;
+    }
+
+    .continue-story-btn {
+        padding: 14px 32px;
+        font-size: 17px;
+    }
+}
+
+/* ================= VIDEO 2 PAGE (NEHA2) ================= */
+
+.video2-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: radial-gradient(circle at 50% 30%, #fff0f5 0%, #ffe4e1 45%, #f5d0fe 80%, #ebd5ff 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 15px 60px;
+}
+
+.video2-garden-glow {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: min(90vw, 600px);
+    height: min(90vw, 600px);
+    background: radial-gradient(circle, rgba(255, 182, 193, 0.45) 0%, rgba(244, 114, 182, 0.15) 50%, rgba(255, 255, 255, 0) 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.video2-petal {
+    position: absolute;
+    top: -40px;
+    animation: fallPetal linear forwards;
+    pointer-events: none;
+    z-index: 2;
+    filter: drop-shadow(0 2px 4px rgba(255, 105, 180, 0.3));
+}
+
+.video2-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.video2-header {
+    margin-bottom: 24px;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.video2-title {
+    font-size: clamp(28px, 6vw, 42px);
+    color: #db2777;
+    font-family: 'Great Vibes', cursive, 'Dancing Script', sans-serif;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.95);
+    line-height: 1.2;
+}
+
+.video2-subtitle {
+    font-size: clamp(14px, 3.5vw, 17px);
+    color: #9d174d;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    opacity: 0.92;
+}
+
+.video2-card {
+    position: relative;
+    width: min(92vw, 720px);
+    margin: 0 auto;
+    border-radius: 24px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 20px 50px rgba(219, 39, 119, 0.22), 0 0 30px rgba(244, 114, 182, 0.25);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video2-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 25px 60px rgba(219, 39, 119, 0.3);
+}
+
+.video2-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    object-fit: contain;
+    background: #000;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+}
+
+.video2-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.video2-play-btn {
+    width: clamp(56px, 15vw, 72px);
+    height: clamp(56px, 15vw, 72px);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ec4899, #f43f5e);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(22px, 5vw, 30px);
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.6);
+    margin-bottom: 12px;
+    animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.video2-overlay-text {
+    color: #ffffff;
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.video2-overlay-subtext {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: clamp(12px, 3vw, 14px);
+    margin-top: 4px;
+}
+
+.video2-continue {
+    margin-top: 32px;
+    padding: 16px 42px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ec4899, #f43f5e);
+    color: #fff;
+    font-size: clamp(16px, 4.5vw, 20px);
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(236, 72, 153, 0.45);
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease forwards, pulseGlow 2.5s infinite ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 48px;
+}
+
+.video2-continue:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 15px 40px rgba(236, 72, 153, 0.55);
+}
+
+
