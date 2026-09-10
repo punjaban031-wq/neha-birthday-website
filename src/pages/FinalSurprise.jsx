@@ -56,9 +56,7 @@ function FinalSurprise() {
     </span>
   ))}
 
-  <h1 className="birthday-title"></h1>
-
-      <h1 className="birthday-title">
+  <h1 className="birthday-title">
   <span className="party">🎉</span>
 
   <span>HAPPY BIRTHDAY</span>

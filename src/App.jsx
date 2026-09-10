@@ -6,6 +6,7 @@ import MemoryBook from "./pages/MemoryBook";
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import LoveLetter from "./pages/LoveLetter";
+import NehaVideo from "./pages/NehaVideo";
 import FinalSurprise from "./pages/FinalSurprise";
 import { checkBirthdayUnlocked } from "./components/Countdown";
 
@@ -34,6 +35,14 @@ function App() {
         element={
           <ProtectedRoute>
             <LoveLetter />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/neha-video"
+        element={
+          <ProtectedRoute>
+            <NehaVideo />
           </ProtectedRoute>
         }
       />

@@ -80,9 +80,9 @@ function LoveLetter() {
 
         <button
           className="btn"
-          onClick={() => navigate("/memory")}
+          onClick={() => navigate("/neha-video")}
         >
-          📸 Our Special Memories ❤️
+          🎥 A Special Video Memory ❤️
         </button>
 
       </div>

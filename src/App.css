@@ -1755,4 +1755,18 @@ body{
     box-shadow: 0 15px 40px rgba(236, 72, 153, 0.55);
 }
 
+/* ================= NEHA VIDEO PAGE ================= */
+.neha-video-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 15px;
+    position: relative;
+    overflow-x: hidden;
+    background: radial-gradient(circle at 50% 30%, #3b184f 0%, #220b33 55%, #12041d 100%);
+}
+
 
